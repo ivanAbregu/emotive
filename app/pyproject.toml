@@ -2,12 +2,14 @@
 name = "take-home"
 version = "0.1.0"
 description = "Basic Django web application for take home assignment."
-authors = ["Your Name <you@example.com>"]
+authors = ["Iván Abregú <ivan.abregu@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 django = "^4.2.3"
 psycopg2-binary = "^2.9.6"
+requests = "^2.31.0"
+djangorestframework = "^3.14.0"
 
 [tool.poetry.dev-dependencies]
 

@@ -1,4 +1,4 @@
-# Take Home - Django Skeleton
+# A Mars Rover camera viewer
 
 ## Getting Started
 Dependencies:
@@ -14,32 +14,24 @@ This will pull the required Docker images and spin up a container running your s
 
 To end the service, press `Ctrl+C`
 
-## The Activity
-Build a simple API in Python, using Django or Flask. This API should integrate with a third party service or a database and accomplish something interesting, but also shouldn’t take terribly long to implement - endpoints for one or two resources would be sufficient. This activity shouldn’t take more than an hour or so. If this doesn’t seem like much time - you’re right! We expect that you’ll have to focus on one of a few areas for your API:
-* The API design and interface (REST vs. GraphQL)
-* Integration with a third-party API OR Integration with a database
 
-### Requirements
-1. A clear problem statement - what do you intend the API to accomplish?
-2. Dependencies for running the API
-3. A code repository link from which your interview can checkout the code OR a .zip file containing the source code
-4. A README file in the code root containing instructions for running the API
+Welcome to the documentation for A Mars Rover camera viewer. This API provides access to Mars photos captured by the Curiosity rover on different Earth dates.
 
-### Some Ideas...
-#### Interesting APIs
-* [NASA Open APIs](https://api.nasa.gov/index.html)
-* [OpenWeather API](https://openweathermap.org/api)
-* [Polygon.io Stocks API](https://polygon.io/)
+## API Endpoint
 
-Plus anything more you can discover
-#### Databases
-* [SQLite](https://www.sqlite.org/index.html)
-* [PostgreSQL](https://www.postgresql.org/)
-* [MySQL](https://www.mysql.com/)
-* [MariaDB](https://mariadb.org/)
+The base URL for the API is: `http://localhost:8000/api/v1/`
 
-PostgreSQL is provided in our skeleton projects, but another database is fine if you’d prefer.
-#### Projects
-* A stock recommendation service
-* A green/red alert for outdoor activity safety
-* A Mars Rover camera viewer
+### Get Mars Photos for a Specific Earth Date
+
+Endpoint: `GET /api/v1/mars-photos/{earth_date}/`
+
+Retrieve Mars photos for a specific Earth date.
+
+#### Parameters
+
+- `earth_date` (str): The Earth date in the format 'YYYY-MM-DD'.
+
+#### Example
+
+```bash
+curl http://localhost:8000/api/v1/mars-photos/2015-12-23/
